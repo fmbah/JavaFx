@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="targetDirValue" prefHeight="299.0" prefWidth="489.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MyController">
+   <children>
+      <Button fx:id="myButton" layoutX="58.0" layoutY="246.0" mnemonicParsing="false" onAction="#showDateTime" text="Shou Date Time" />
+      <TextField fx:id="myTextField" layoutX="181.0" layoutY="246.0" />
+      <Button fx:id="allTransform" layoutX="213.0" layoutY="53.0" mnemonicParsing="false" onAction="#allTransformService" prefHeight="23.0" prefWidth="100.0" text="选择文件夹" />
+      <Button fx:id="singleTransform" disable="true" layoutX="213.0" layoutY="88.0" mnemonicParsing="false" onAction="#singleTransformService" prefHeight="23.0" prefWidth="100.0" text="选择文件" />
+      <RadioButton layoutX="112.0" layoutY="57.0" mnemonicParsing="false" onAction="#disbaleSingle" selected="true" text="批量转换">
+         <toggleGroup>
+            <ToggleGroup fx:id="choiceRatio" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="112.0" layoutY="92.0" mnemonicParsing="false" onAction="#disableAll" text="单件转换" toggleGroup="$choiceRatio" />
+      <Text layoutX="112.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="输出目录：">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="targetDirValue" editable="false" layoutX="183.0" layoutY="130.0" />
+      <Button layoutX="353.0" layoutY="130.0" mnemonicParsing="false" onAction="#targetDir" text="选择文件夹" />
+      <ProgressIndicator fx:id="pi0" layoutX="215.0" layoutY="174.0" prefHeight="52.0" prefWidth="60.0" progress="0.0" />
+   </children>
+</AnchorPane>
