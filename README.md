@@ -20,3 +20,5 @@ https://yuchen112358.github.io/2016/05/06/javafx-install/
 https://code.makery.ch/zh-cn/library/javafx-tutorial/part7/
 https://www.jianshu.com/p/3798a78303f8
 https://docs.oracle.com/javafx/2/ui_controls/progress.htm
+http://www.javafxchina.net/blog/docs/tutorial5/
+https://docs.oracle.com/javafx/2/get_started/hello_world.htm
