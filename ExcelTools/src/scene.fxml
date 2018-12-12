@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane pickOnBounds="false" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MajorController">
+   <children>
+      <Text layoutX="141.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="批量转换：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button id="chooseFolder" fx:id="chooseFolder" layoutX="241.0" layoutY="39.0" mnemonicParsing="false" onAction="#chooseFolder" text="选择文件夹">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Text id="chooseFolderText" fx:id="chooseFolderText" layoutX="379.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <ProgressIndicator id="uploadProgress" fx:id="uploadProgress" layoutX="243.0" layoutY="250.0" prefHeight="79.0" prefWidth="154.0" progress="0.0" />
+      <Text layoutX="141.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="单件转换：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button id="chooseFile" fx:id="chooseFile" layoutX="241.0" layoutY="96.0" mnemonicParsing="false" onAction="#chooseFile" text="选择文件">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Text fx:id="chooseFileText" layoutX="366.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="112.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="输出目录：">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField id="targetDirValue" fx:id="targetDirValue" layoutX="212.0" layoutY="161.0" prefHeight="23.0" prefWidth="228.0" />
+      <Button id="chooseTargetDir" fx:id="chooseTargetDir" layoutX="440.0" layoutY="161.0" mnemonicParsing="false" onAction="#chooseTargetDir" text="选择文件夹" />
+      <Text id="finishText" fx:id="finishText" fill="#10eb23" layoutX="240.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="转换完成">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+      <Button id="openFile" fx:id="openFile" layoutX="192.0" layoutY="270.0" mnemonicParsing="false" onAction="#openFile" text="打开文件夹">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button id="againTime" fx:id="againTime" layoutX="340.0" layoutY="270.0" mnemonicParsing="false" onAction="#againTime" text="再来一次">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <RadioButton fx:id="batchRadio" layoutX="120.0" layoutY="50.0" mnemonicParsing="false" onAction="#batchRadio">
+         <toggleGroup>
+            <ToggleGroup fx:id="radio" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="singleRadio" layoutX="120.0" layoutY="107.0" mnemonicParsing="false" onAction="#singleRadio" toggleGroup="$radio" />
+      <Button fx:id="startTransform" layoutX="266.0" layoutY="207.0" mnemonicParsing="false" onAction="#startTransform" text="开始转换">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

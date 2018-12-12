@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project ExcelTools">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}/.."/>
+    <property name="dir.jarfile" value="${dir.buildfile}"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/et.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="application.Main"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="${dir.jarfile}/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="E:/eclipse-dsl-2018-09-win32-x86_64/eclipse/plugins/org.eclipse.fx.ide.css.jfx8_2.3.0.201603030809.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/java/Desktop/JavaFx-master/JavaFx0/libs/poi-4.0.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/java/Desktop/JavaFx-master/JavaFx0/libs/poi-ooxml-3.9.jar"/>
+        </jar>
+    </target>
+</project>
